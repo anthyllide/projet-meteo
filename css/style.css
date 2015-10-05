@@ -1,0 +1,91 @@
+* {
+	margin :0px;
+	padding : 0px;
+}
+
+#wrapper {
+	width : 1000px;
+	margin : 0 auto;
+	border-left : 1px solid grey;
+	border-right : 1px solid grey;
+}
+
+h1{
+	margin : 20px 0 0 100px;
+	width: 800px;
+	text-align : center;
+	font-family: 'Bad Script', cursive;
+	font-size : 50px;
+	color : blue;
+	border-bottom : 1px solid grey;
+}
+
+form {
+	margin : 10px 0 0 700px;	
+}
+
+form input {
+	height : 30px;
+	width : 200px;
+	padding : 5px;
+	border: solid 1px #3e58bd;
+	border-radius : 2px;
+	background-color : #80bad5;
+	cursor : pointer;
+	color : white;
+}
+
+form input:hover{
+	color : black;
+}
+
+#contenu {
+	margin-top : 30px;
+}
+
+#contenu table{
+	margin : 10px auto 30px auto;
+	width : 600px;
+	height : 200px;
+	border-collapse : collapse;
+	font-family : Arial;
+	border : solid 1px black;
+}
+
+#contenu table caption {
+	font-weight : bold;
+	font-size : 20px;
+	margin-bottom : 10px;
+}
+
+#contenu table tbody td, #contenu table tbody th {
+	border : solid 1px grey;
+}
+
+ #contenu table tbody th {
+	 witdh : 100px;
+	 text-align : left;
+	 padding-left : 20px;
+	 color : #383aaa;
+	 font-weight : bold;
+	 font-size : 15px;
+ }
+ 
+ #contenu table tbody td {
+	 text-align : center;
+	  font-size : 15px;
+ }
+ 
+ #msg_error {
+	 margin : 10px auto;
+	 text-align : center;
+	 background-color : #96abdc;
+	 border : 1px solid #8075d1;
+	 height : 30px;
+	 width : 500px;
+	 padding : 5px;
+	 line-height : 30px;
+	 font-family : Arial;
+	 font-size : 15px;
+	 color : #232b68;
+ }
