@@ -30,55 +30,55 @@ require ('getdata-controller.php');
 
 <?php if (isset ($msg_error)) : ?>
 
-<div id="msg_error">
+	<div id="msg_error">
 
-	<p><?php echo $msg_error; ?></p>
+		<p><?php echo $msg_error; ?></p>
 	
 </div>
 
 <?php endif ?>
 
-
-
-<div id="contenu">
-
-<!-- Affichage des données -->
 <?php if (isset($displayData)): ?>
-	
-	 <?php foreach($displayData as $id => $value): ?>
+
+	<div id="contenu">
+
+		<!-- Affichage des données -->
+		<?php foreach($displayData as $id => $value): ?>
 	 
-		<table>
-		<caption>Bulletin du <?php echo $value['date'].' '.$value['period'].' à '.$value['city']; ?></caption>
-		<tbody>
-		<tr>
-			<th>Résumé</th>
-			<td> <?php echo $value['resume'];?></td>
-		</tr>
-		<tr>
-			<th>Identifiant</th>
-			<td><?php echo $value['idWeather'];?></td>
-		</tr>
-		<tr>
-			<th>Température minimale</th>
-			<td><?php echo $value['tptMin'].' °C';?></td>
-		</tr>
-		<tr>
-			<th>Température maximale </th>
-			<td><?php echo $value['tptMax'].' °C';?></td>
-		</tr>
-		<tr>
-			<th>Commentaire</th>
-			<td><?php echo $value['comment'];?></td>
-		</tr>
-		</tbody>
-		</table>
+			<table class="tableForecast">
+				<caption>Bulletin du <?php echo $value['date'].' '.$value['period'].' à '.$value['city']; ?></caption>
+			<tbody>
+				<tr>
+					<th>Résumé</th>
+					<td> <?php echo $value['resume'];?></td>
+				</tr>
+				<tr>
+					<th>Identifiant</th>
+					<td><?php echo $value['idWeather'];?></td>
+				</tr>
+				<tr>
+					<th>Température minimale</th>
+					<td><?php echo $value['tptMin'].' °C';?></td>
+				</tr>
+				<tr>
+					<th>Température maximale </th>
+					<td><?php echo $value['tptMax'].' °C';?></td>
+				</tr>
+				<tr>
+					<th>Commentaire</th>
+					<td><?php echo $value['comment'];?></td>
+				</tr>
+			</tbody>
+			</table>
 		
-	 <?php endforeach ?>
-	 
+		<?php endforeach ?>
+		
+</div>	 
+
 <?php endif ?>
 
 
-</div>
+
 
 </div>
 

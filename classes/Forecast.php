@@ -5,6 +5,7 @@ class Forecast
 		
 	}
 	
+	//lecture du flux
 	public function getFileCsv() {
 		
 		$filename = 'flux-meteo.csv';
@@ -31,6 +32,7 @@ class Forecast
 		
 	}
 	
+	//Enregistrement des données dans la table 
 	public function persistData(){
 		
 		try {
@@ -79,9 +81,11 @@ class Forecast
 				if($dataInsert === false){
 					
 							return false;
-						}		
-						
+				}								
 			}
+			
+			$rep->closeCursor();
+			
 		} else {
 			
 			return 'Lecture impossible du fichier de flux';
@@ -89,6 +93,7 @@ class Forecast
 		}
 	}
 	
+	//Lecture des données de la table 
 	public function getData(){
 		
 		try {
@@ -121,6 +126,8 @@ class Forecast
 		
 					$i++;
 				}
+				
+				$dataRead->closeCursor();
 				
 				return $forecast;
 				
